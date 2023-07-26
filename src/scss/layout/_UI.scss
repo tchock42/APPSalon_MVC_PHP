@@ -1,0 +1,50 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-app{
+    @include m.tablet{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 100vh;  
+    }
+    .imagen{
+        height: 20rem; //en mobile toma solo 30rem en bloque con login
+        background-image: url(../img/1.jpg);  // sale de css en build y entra en img
+        background-size: cover;
+        background-position: center center;
+        @include m.tablet{
+            height: auto; //toma toda la altura disponible cuando la pantalla es grande
+        }
+    }
+    .app{
+        width: 95%;
+        margin: 0 auto;
+        padding: 3rem 0;
+        @include m.tablet{
+            overflow: scroll;
+        }
+    }
+}
+
+.barra{
+    margin: v.$separacion 0;
+    @include m.tablet{  //en tablet display flex alinea horizontalmente
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .boton{
+        @include m.boton(v.$negro, v.$blanco);
+        margin: 0;
+    }
+}
+.barra-servicios{
+    margin-bottom: v.$separacion;
+    @include m.tablet{
+        display: flex; //se despliega de modo horizontal en tablet
+        justify-content: space-between;
+    }
+    .boton{
+        margin: 0 0 1rem 0;
+    }
+}

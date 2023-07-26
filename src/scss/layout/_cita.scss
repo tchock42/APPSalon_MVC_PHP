@@ -1,0 +1,14 @@
+.seccion{
+     padding: 5rem 0;
+     display: none; //secciones ocultas por default
+
+     .text-center{
+        text-align: center;
+     } 
+}
+.mostrar{ //si se activa esta etiqueta, se mostrará la sección
+     display:block;
+}
+.ocultar{ //si se activa esta etiqueta, se ocultará la sección
+     display:none;
+}
