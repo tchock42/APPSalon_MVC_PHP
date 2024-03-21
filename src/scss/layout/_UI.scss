@@ -22,6 +22,9 @@
         padding: 3rem 0;
         @include m.tablet{
             overflow: scroll;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     }
 }
@@ -47,4 +50,9 @@
     .boton{
         margin: 0 0 1rem 0;
     }
+}
+.copyright{
+    text-align: center;
+    font-size: 1.8rem;
+    padding-top: 2rem;
 }

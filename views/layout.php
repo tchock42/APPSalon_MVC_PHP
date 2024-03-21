@@ -13,9 +13,13 @@
         <div class="app">
             <?php echo $contenido; ?>
 
+            <div>
+                <p class="copyright">Powered by Jacob Gómez Carrillo. <?php echo date('Y') ?></p>
+            </div>
         </div>
+        
     </div>
-
+    
 <?php echo $script ?? ''; ?> <!-- Imprime script o nada, definida en index.php -->
             
 </body>
