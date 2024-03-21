@@ -58,7 +58,11 @@ class LoginController{
         if(!isset($_SESSION)){
             session_start();
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> fb94069b4454dd19362b6e38c334981f4ad5f34a
         $_SESSION = [];
         header('Location: /');
     }
