@@ -11,11 +11,12 @@
     <div class="contenedor-app">
         <div class="imagen"></div> <!--aqui va la imagen-->
         <div class="app">
+            <div>
+                <p class="copyright">Powered by Jacob Gómez Carrillo <?php echo date('Y') ?></p>
+            </div>
             <?php echo $contenido; ?>
 
-            <div>
-                <p class="copyright">Powered by Jacob Gómez Carrillo. <?php echo date('Y') ?></p>
-            </div>
+            
         </div>
         
     </div>

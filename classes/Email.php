@@ -31,14 +31,15 @@ class Email{
 
         //recipientes
         $mail->setFrom('cuentas@appsalon.com'); //quien lo envías. 
-        $mail->addAddress('cuentas@appsalon.com', 'Appsalon'); //hosting contratado
+        $mail->addAddress($this->email, $this->nombre); //hosting contratado
         $mail->Subject = 'Confirma tu cuenta';
 
         //set HTML format 
         $mail->isHTML(TRUE);
         $mail->CharSet = 'UTF-8';
         $contenido = '<html>';
-        $contenido .= "<p><strong> Hola " . $this->nombre . "</strong> Has creado tu cuenta en Appsalon, solo debes confirmarla presionando el siguiente enlace. </p>";
+        $contenido .= "<p><strong> Hola " . $this->nombre . "</strong> </p>";
+        $contenido .= "Has creado tu cuenta en Appsalon, solo debes confirmarla presionando el siguiente enlace. </p>";
         $contenido .= "<p> Presiona aquí <a href='" . $_ENV['APP_URL'] . "/confirmar-cuenta?token=" . $this->token . "'>Confirmar  Cuenta</a> </p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje</p>";
         $contenido .= '</html>';
@@ -61,7 +62,7 @@ class Email{
 
         //recipientes
         $mail->setFrom('cuentas@appsalon.com'); //quien lo envías. 
-        $mail->addAddress('cuentas@appsalon.com', 'Appsalon'); //hosting contratado
+        $mail->addAddress($this->email, $this->nombre); //hosting contratado
         $mail->Subject = 'Reestablece tu Contraseña';
 
         //set HTML format 
