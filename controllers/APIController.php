@@ -38,7 +38,9 @@ class APIController{
             $citaServicio->guardar();
         }
         //retornamos una respuesta
-        echo json_encode(['resultado'=>$resultado]); //trae el resultado y el id de Cita
+        echo json_encode([
+            'resultado'=>$resultado
+        ]); //trae el resultado y el id de Cita
     }
     public static function eliminar(){
         if($_SERVER['REQUEST_METHOD'] ==='POST'){
